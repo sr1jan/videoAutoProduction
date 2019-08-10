@@ -8,7 +8,7 @@ echo "+++++++++++++++++++++++++++++++
 +++++++++++++++++++++++++++++++";
 echo;
 
-python scrapARTICLES.py;
+python pythonScripts/scrapARTICLES.py;
 
 echo;
 echo "++++++++++++++++++++++++++++++
@@ -16,20 +16,20 @@ echo "++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++";
 echo;
 
-./generateAudio.sh;
+shellScripts/generateAudio.sh;
 
 echo;
 echo "+++++++++++++++++++++++++++++++++
 ++++++++ Scraping Images ++++++++
 +++++++++++++++++++++++++++++++++";
 
-python images.py
+python pythonScripts/images.py
 
 echo;
 echo "++++++++++++++++++++++++++++++
 ++++++ Generating Video ++++++
 ++++++++++++++++++++++++++++++";
 
-python generateVideo.py;
+python pythonScripts/generateVideo.py;
 
 echo;
