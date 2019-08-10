@@ -69,6 +69,9 @@ with urllib.request.urlopen(parentURL) as f:
             break
         count += 1
 
+if feed_list is None:
+    print('No article availale right now')
+    exit()
 
 num = 1
 error = 0
