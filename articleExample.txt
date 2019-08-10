@@ -1,0 +1,9 @@
+<speak>
+<s>Bishkek: In a veiled attack on Pakistan, Prime Minister Narendra Modi on Friday said that countries sponsoring, aiding and funding terrorism must be held accountable as he called for a global conference to combat the menace.</s>
+<s>Addressing the Shanghai Cooperation Organisation Summit here, Modi highlighted the spirit and ideals of the <say-as interpret-as="characters">SCO</say-as> to strengthen cooperation in the fight against terrorism.</s>
+<s>To combat the menace of terrorism, countries will have to come out of their narrow purview to unite against it, Modi said in the presence of his Pakistani counterpart Imran Khan.</s>
+<s>"Countries sponsoring, aiding and funding terrorism must be held accountable," he said.</s>
+<s>Prime Minister Modi also called on the <say-as interpret-as="characters">SCO</say-as> member states to cooperate under the <say-as interpret-as="characters">SCO</say-as> Regional Anti-Terrorist Structure against terrorism.</s>
+<s>Modi arrived in the Kyrgyz capital on Thursday for the two-day <say-as interpret-as="characters">SCO</say-as> summit.</s>
+<s>The <say-as interpret-as="characters">SCO</say-as> is a China-led 8-member economic and security bloc with India and Pakistan being admitted to the grouping in 2017.</s>
+</speak>
