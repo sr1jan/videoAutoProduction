@@ -65,7 +65,7 @@ with urllib.request.urlopen(parentURL) as f:
         feed = {}
 
         # limiting max articles to be scraped
-        if count >= 8:
+        if count >= 6:
             break
         count += 1
 
