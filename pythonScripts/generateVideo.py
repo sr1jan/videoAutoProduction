@@ -12,6 +12,7 @@ mkdir(f'{path}/Videos')
 # generating videos from images with fade transition
 for images_folder in listdir(f'{path}/Images'):
     pics_count = len(listdir(f'{path}/Images/{images_folder}'))
+    if pics_count is 0: continue
     audio_length = int(run(["mp3info", "-p", "% S", f'{path}/audio/{images_folder}.mp3'], capture_output=True, text=True).stdout)
     image_duration = float(f'{audio_length - 2.0 * pics_count}')
     image_duration = float(f'{image_duration/pics_count}')

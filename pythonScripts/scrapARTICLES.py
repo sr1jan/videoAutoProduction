@@ -11,13 +11,13 @@ import csv
 
 
 date = datetime.now().strftime('%Y-%m-%d')
-day = datetime.now().strftime('%d')
+# day = datetime.now().strftime('%d')
 os.mkdir(f'/home/sr1/videoAUTO/News/{date}')
 os.mkdir(f'/home/sr1/videoAUTO/News/{date}/Articles')
 os.chdir(f'/home/sr1/videoAUTO/News/{date}/Articles')
 
 # API key for smmry.com saved in a yml file
-creds = yaml.load(open('/home/sr1/.config/.credentials.yml'))
+creds = yaml.load(open('/home/sr1/.config/.credentials.yml'), Loader=yaml.BaseLoader)
 key = creds['smmry']['key'][0]
 
 # article scraping source
@@ -48,7 +48,7 @@ with urllib.request.urlopen(parentURL) as f:
         title = item.getElementsByTagName('title')[0].childNodes[0].data
         date = item.getElementsByTagName('pubDate')[0].childNodes[0].data
         link = item.getElementsByTagName('link')[0].childNodes[0].data
-        if 'Watch' in title or 'View' in title or day not in date:
+        if 'Watch' in title or 'View' in title:
             continue
         title = title.replace(" - Economic Times", "")
 
@@ -65,7 +65,7 @@ with urllib.request.urlopen(parentURL) as f:
         feed = {}
 
         # limiting max articles to be scraped
-        if count >= 6:
+        if count >= 4:
             break
         count += 1
 
