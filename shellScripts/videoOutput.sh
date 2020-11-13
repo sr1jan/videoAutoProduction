@@ -4,7 +4,7 @@
 # SCRIPT OPTIONS - CAN BE MODIFIED
 DATE=`date +%F`
 
-SAVE_PATH="~/videoAUTO/News/$DATE/Videos"
+SAVE_PATH="~/Projects/Others/videoAUTO/News/$DATE/Videos"
 
 WIDTH=1280
 HEIGHT=720

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/videoAUTO/News/$(date +"%Y-%m-%d")/Images
+cd ~/Projects/Others/videoAUTO/News/$(date +"%Y-%m-%d")/Images
 
 for f in *;
 do

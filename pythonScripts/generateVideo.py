@@ -5,7 +5,7 @@ from moviepy.editor import VideoFileClip, TextClip, AudioFileClip, CompositeVide
 
 
 date = datetime.now().strftime('%Y-%m-%d')
-path = f'/home/sr1/videoAUTO/News/{date}'
+path = f'/home/sr1/Projects/Others/videoAUTO/News/{date}'
 chdir(path)
 mkdir(f'{path}/Videos')
 
@@ -18,7 +18,7 @@ for images_folder in listdir(f'{path}/Images'):
     image_duration = float(f'{image_duration/pics_count}')
 
     try:
-        run(['/home/sr1/videoAUTO/scripts/shellScripts/videoOutput.sh', f'"{images_folder}"', f'{image_duration}', f'{path}/Images/{images_folder}'])
+        run(['/home/sr1/Projects/Others/videoAUTO/scripts/shellScripts/videoOutput.sh', f'"{images_folder}"', f'{image_duration}', f'{path}/Images/{images_folder}'])
     except Exception as e:
         print(e)
 
@@ -42,7 +42,7 @@ chdir('tmpVids')
 # adding headline to each video
 videos_list = []
 num = 1
-transition_clip = VideoFileClip('/home/sr1/videoAUTO/scripts/mediaFiles/transition.mp4')
+transition_clip = VideoFileClip('/home/sr1/Projects/Others/videoAUTO/scripts/mediaFiles/transition.mp4')
 for videos in listdir('..'):
     if videos.endswith('.mp4'):
         headline_audio = 'HEADLINE-' + videos[:-4] + '.mp3'
@@ -57,7 +57,7 @@ for videos in listdir('..'):
         video_clip = VideoFileClip(f'../{videos}')
         video_duration = video_clip.duration
 
-        isf_logo = ImageClip('/home/sr1/videoAUTO/scripts/mediaFiles/isf.png').set_duration(video_duration)
+        isf_logo = ImageClip('/home/sr1/Projects/Others/videoAUTO/scripts/mediaFiles/isf.png').set_duration(video_duration)
 
         render = CompositeVideoClip([video_clip.set_start(audio_duration), isf_logo.set_start(audio_duration).set_pos(('left', 'bottom')), text_clip.crossfadein(1).crossfadeout(1)], bg_color=[128, 0, 0])
         render.write_videofile(f'{num}.mp4')
@@ -79,8 +79,8 @@ news = concatenate_videoclips(videos, transition=transition_clip)
 news.write_videofile(f'videos.mp4')
 
 news_clip = VideoFileClip('videos.mp4')
-intro_clip = VideoFileClip(f'/home/sr1/videoAUTO/scripts/mediaFiles/introISF.mp4').set_pos('center')
-subscribe_clip = VideoFileClip(f'/home/sr1/videoAUTO/scripts/mediaFiles/subs.mp4', audio=False).set_pos('center')
+intro_clip = VideoFileClip(f'/home/sr1/Projects/Others/videoAUTO/scripts/mediaFiles/introISF.mp4').set_pos('center')
+subscribe_clip = VideoFileClip(f'/home/sr1/Projects/Others/videoAUTO/scripts/mediaFiles/subs.mp4', audio=False).set_pos('center')
 
 final_video = CompositeVideoClip([news_clip.set_start(subscribe_clip.duration + 2 + intro_clip.duration + 2), intro_clip.set_start(subscribe_clip.duration + 2), subscribe_clip.crossfadeout(1)])
 final_video.write_videofile(f'{date}.mp4')

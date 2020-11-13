@@ -12,9 +12,9 @@ import csv
 
 date = datetime.now().strftime('%Y-%m-%d')
 # day = datetime.now().strftime('%d')
-os.mkdir(f'/home/sr1/videoAUTO/News/{date}')
-os.mkdir(f'/home/sr1/videoAUTO/News/{date}/Articles')
-os.chdir(f'/home/sr1/videoAUTO/News/{date}/Articles')
+os.mkdir(f'/home/sr1/Projects/Others/videoAUTO/News/{date}')
+os.mkdir(f'/home/sr1/Projects/Others/videoAUTO/News/{date}/Articles')
+os.chdir(f'/home/sr1/Projects/Others/videoAUTO/News/{date}/Articles')
 
 # API key for smmry.com saved in a yml file
 creds = yaml.load(open('/home/sr1/.config/.credentials.yml'), Loader=yaml.BaseLoader)

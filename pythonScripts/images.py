@@ -6,7 +6,7 @@ from subprocess import run
 from PIL import Image
 
 date = datetime.now().strftime('%Y-%m-%d')
-path = f'/home/sr1/videoAUTO/News/{date}'
+path = f'/home/sr1/Projects/Others/videoAUTO/News/{date}'
 mkdir(f'{path}/Images')
 
 files = []

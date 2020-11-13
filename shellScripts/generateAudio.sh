@@ -12,7 +12,7 @@ cd audio
 for file in ../Articles/*.txt;
 do
 
-    python ~/videoAUTO/scripts/pythonScripts/synthesize_file.py --ssml "$file";
+    python ~/Projects/Others/videoAUTO/scripts/pythonScripts/synthesize_file.py --ssml "$file";
     sleep 2;
 
 done
@@ -24,7 +24,7 @@ mkdir tempAudio;
 for audio in *.mp3;
 do
 
-    ~/videoAUTO/scripts/shellScripts/mixAudio.sh "$audio" tempAudio/"$audio";
+    ~/Projects/Others/videoAUTO/scripts/shellScripts/mixAudio.sh "$audio" tempAudio/"$audio";
     rm "$audio";
     mv tempAudio/"$audio" .;
 

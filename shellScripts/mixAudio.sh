@@ -8,7 +8,7 @@ length=`mp3info -p "%m:%02s\n" "$1"`
 output="trimBG.mp3"
 
 # Background audio file
-ogfile="/home/sr1/videoAUTO/scripts/mediaFiles/bgNEWS.mp3"
+ogfile="/home/sr1/Projects/Others/videoAUTO/scripts/mediaFiles/bgNEWS.mp3"
 
 ffmpeg -i "$ogfile" -ss 00:00:00 -to "$length" -c copy "$output" > /dev/null 2>&1;
 
